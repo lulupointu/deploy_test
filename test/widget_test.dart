@@ -14,6 +14,6 @@ void main() {
     // Build our app and trigger a frame.
     await tester.pumpWidget(const MyApp());
 
-    expect(true, true);
+    expect(true, false);
   });
 }
