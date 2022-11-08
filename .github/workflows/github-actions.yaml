@@ -5,6 +5,7 @@ on:
 
 jobs:
   install:
+    name: Install
     runs-on: ubuntu-latest
 
     steps:
@@ -17,11 +18,19 @@ jobs:
         run: flutter pub get
 
   analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+    needs: install
+
     steps:
       - name: Analyze project source
         run: dart analyze
 
   test:
+    name: Test
+    runs-on: ubuntu-latest
+    needs: install
+
     steps:
       - name: Run tests
         run: flutter test
