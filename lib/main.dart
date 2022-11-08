@@ -56,6 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
             return Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
+                const Text('Information about the package'),
                 Text('Package name: ${packageInfo.packageName}'),
                 Text('App name: ${packageInfo.appName}'),
                 Text('Version: ${packageInfo.version}'),
